@@ -9,7 +9,7 @@ user_choice = int(input("Welcome to the Rock Paper Scissors Game! Choose one of 
 computer_choice = random.choice(choices)
 computer_choice = choices.index(computer_choice)
 
-# defining the conditions for deciding who wins in a loop
+# defining the logic behind the game
 while user_choice in [0, 1, 2]:
     print("your choice: ", choices[user_choice], "\ncomputer choice: ", choices[computer_choice])
     if 0 < user_choice <= 3:
