@@ -12,30 +12,18 @@ computer_choice = choices.index(computer_choice)
 # defining the conditions for deciding who wins in a loop
 while user_choice in [0, 1, 2]:
     print("your choice: ", choices[user_choice], "\ncomputer choice: ", choices[computer_choice])
-    if user_choice == 0:
-        if computer_choice == 0:
-            print("it's a draw!")
-        if computer_choice == 1:
-            print("You lose!")
-        if computer_choice == 2:
-            print("You win!")
-
-    if user_choice == 1:
-        if computer_choice == 0:
-            print("You win!")
-        if computer_choice == 1:
-            print("it's a draw!")
-        if computer_choice == 2:
-            print("You lose!")
-
-    if user_choice == 2:
-        if computer_choice == 0:
-            print("You lose!")
-        if computer_choice == 1:
-            print("You win!")
-        if computer_choice == 2:
-            print("it's a draw!")
-
+    if 0 < user_choice <= 3:
+        print("You typed an invalid choice. Please try again.")
+    elif user_choice == 0 and computer_choice == 2:
+        print("You win!")
+    elif computer_choice == 0 and user_choice == 2:
+        print("You lose!")
+    elif user_choice == computer_choice:
+        print("It's a tie!")
+    elif user_choice > computer_choice:
+        print("You win!")
+    elif computer_choice > user_choice:
+        print("You lose!")
     user_choice = int(input("wanna continue the game? Choose one of the options: 0) rock 1) paper 2) scissors\npress any other number to quit \n"))
 
 print("Thank you for playing!")
