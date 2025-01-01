@@ -21,4 +21,4 @@ random.shuffle(rand_values)
 for value in rand_values:
     pw += value
 
-print(pw)
+print(f"The generated password is: {pw}")
