@@ -24,7 +24,5 @@ while not at_goal():
             put()
     elif a_path_is_clear():
         turn_left()
-    elif wall_in_front():
-        turn_left()
     elif front_is_clear():
         move()
