@@ -99,7 +99,7 @@ while True:
 ================================================================================================================================================================================================================
 
 """
-# solution 2: going side by side (harder)
+# solution 2: going side by side (harder because you need to account for row and column numbers, steps taken, etc)
 think(0)
 def turn_right():
     for i in range(3):
@@ -133,6 +133,7 @@ def move_a_row_right():
             turn_right()
             move()
             move()
+        turn_right()
         move()
         turn_left()
         return True
@@ -145,15 +146,16 @@ def toss_all():
 
 move()
 steps = 1
-columns_count = 2
-rows_count = 1
-num_of_walls = 0
-row_number = 1
-first_inner_access = True
+columns_count = 2 # accounting for first_column we're at and last one
+rows_count = 1 # starting row count
+num_of_walls = 0 # number of walls, to add a condition helping the robot notice that it's at the compost  bin
+row_number = 1 # row_number the robot is at while moving
+compost_bin = True 
 
 while not at_goal():
     if front_is_clear():
         take_all()
+        
         if columns_count - steps == 2:
             if (rows_count - row_number == 1 or rows_count - row_number == 0) and num_of_walls > 1:
                 take_all()
@@ -182,27 +184,26 @@ while not at_goal():
                 move()
                 turn_right()
                 move()
-            elif first_inner_access:
+                done()
+            elif compost_bin:
                 take_all()
-                steps = 1
                 turn_left()
                 if move_a_row_left():
                     row_number += 1
-                    steps = 2
+                    steps = 1
                 else: 
                     row_number += 1
-                    steps = 1
-                take_all()
-                first_inner_access = False
+                    steps = 0
+                compost_bin = False
             elif row_number % 2 == 0:
                 take_all()
                 turn_left()
                 if move_a_row_left():
                     row_number += 1
-                    steps = 2
+                    steps = 1
                 else: 
                     row_number += 1
-                    steps = 1
+                    steps = 0
                 take_all()
 
             elif row_number % 2 == 1:
@@ -210,16 +211,17 @@ while not at_goal():
                 turn_right()
                 if move_a_row_right():
                     row_number += 1
-                    steps = 2
+                    steps = 1
                 else: 
                     row_number += 1
-                    steps = 1
+                    steps = 0
                 take_all()
-
-        if front_is_clear():    
+        
+        else:
             move()
-            
         steps += 1
+            
+        
         
         if row_number == 1 and num_of_walls == 0:
             columns_count +=1
@@ -242,11 +244,24 @@ while not at_goal():
                 turn_left()
                 steps = 1
                 row_number += 1
-        
+        if wall_in_front():
+            if row_number % 2 == 0:
+                turn_left()
+                move()
+                turn_left()
+                move()
+                row_number += 1
+                steps = 1
+            elif row_number % 2 == 1:
+                turn_right()
+                move()
+                turn_right()
+                move()
+                row_number += 1
+                steps = 1
+            
         if columns_count - steps > 2:
             if not front_is_clear():
-                if steps == 1:
-                    steps == 0
                 turn_right()
                 take_all()
                 move()
@@ -256,25 +271,23 @@ while not at_goal():
                 turn_left()
                 move()
                 turn_right()
-                if steps <= 2 :
-                    steps += 1
-                elif steps > 2:
-                    steps += 2
-                else:
-                    steps += 2
-                if columns_count - steps == 1 or columns_count - steps == 0:
+                take_all()
+                steps += 2
+               
+                    
+                        
+                    
+                if columns_count - steps == 1:
                     if row_number % 2 == 0:
                         turn_left()
                         move()
                         turn_left()
                         row_number += 1
+                        steps = 0
                     elif row_number % 2 == 1:
                         take_all()
                         turn_right()
                         move()
                         turn_right()
                         row_number += 1
-                    if columns_count - steps == 1:
                         steps = 0
-                    elif columns_count - steps == 0:
-                        steps = 1
