@@ -36,7 +36,7 @@ operations = {
 
 
 def calculator():
-    value = float(input("What's the first number? \n"))
+    first = float(input("What's the first number? \n"))
 
     while True:
         print(f"What's the operation? ")
@@ -44,15 +44,13 @@ def calculator():
             print(key, end="\n")
         operation = input()
         second = float(input("What's the second number? \n"))
-        result = operations[operation](value, second)
-        print(f"{value} {operation} {second} = {result}")
+        result = operations[operation](first, second)
+        print(f"{first} {operation} {second} = {result}")
 
         keep_going = input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation: ")
-        if keep_going == "n":
+        if keep_going == "y":
+            first = result
+        else:
             print("Goodbye!")
             break
-        elif keep_going == "y":
-            value = result
-
-
 calculator()
