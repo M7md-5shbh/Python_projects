@@ -24,7 +24,8 @@ states = mechanics.data.state.to_list()
 while True:
     answer_state = screen.textinput(title=f"{len(states_already_answered)}/{len(mechanics.data)} Guess State Name", prompt="Enter State Name (Enter Q to quit)").title()
     if answer_state == "Q":
-        print(f"You got {len(states_already_answered)} answers correct out of 50")
+        mechanics.missing_states(already_answered)
+        print(f"You got {len(already_answered)} answers correct out of 50")
         print("Thank you for playing!")
         sys.exit()
         break
