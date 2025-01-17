@@ -34,3 +34,7 @@ class Game_Mechanics(Turtle):
         self.write(arg=f"State {answer} Does not exist", align=align, font=arial_font)
         time.sleep(2)
         self.clear()
+
+    def missing_states(self, already_answered):
+        new_data = pd.DataFrame([state for state in self.data.state if state not in already_answered])
+        new_data.to_csv("missing_states.csv", index=False)
