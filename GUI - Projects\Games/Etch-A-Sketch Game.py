@@ -1,3 +1,6 @@
+# written by M7md-5shbh
+# Etch-a-sketch game using turtle
+#--------------------------------------------
 # importing the necessary modules
 # turtle usually comes preinstalled but if it shows a "module not found" error, install it with
 # pip install turtle or python -m pip install turtle

@@ -1,3 +1,7 @@
+# written by M7md-5shbh
+# Turtle race game
+#--------------------------------------------
+
 # Importing the necessary modules 
 # if any of them shows a module not found error, install it with pip install "module name"
 import random
