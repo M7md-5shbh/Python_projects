@@ -1,3 +1,7 @@
+# written by M7md-5shbh
+# Performs functions and calculations of a coffee machine
+#--------------------------------------------
+
 menu = {
     "espresso": {
         "ingredients": {

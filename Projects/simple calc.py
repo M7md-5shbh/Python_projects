@@ -1,3 +1,7 @@
+# created by M7md-5shbh
+# Performs text-based calculations 
+#--------------------------------------------
+
 print(r"""
  _____________________
 |  _________________  |

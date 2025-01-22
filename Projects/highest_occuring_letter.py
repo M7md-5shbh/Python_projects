@@ -1,5 +1,4 @@
 # written by M7md-5shbh
-# Date: 2024-12-26
 # a code that returns the highest occuring letter in a given text/sentence
 #--------------------------------------------
 

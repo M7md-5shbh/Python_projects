@@ -1,3 +1,6 @@
+# created by M7md-5shbh
+# Generates a random password based on specifications the user can decide
+#--------------------------------------------
 # importing necessary modules
 import random
 import string

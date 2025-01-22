@@ -1,5 +1,5 @@
 # created by M7md-5shbh
-# it performs simple calculations like mean/median/mode/standard deviation/variance
+# it performs calculations like mean/median/mode/standard deviation/variance
 #---------------------------------------------
 
 

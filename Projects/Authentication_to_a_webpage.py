@@ -1,5 +1,4 @@
 # Written by M7md-5shbh
-# Date: 2024-12-26
 # it performs simple authentication to GitHub using selenium module
 #---------------------------------------------
 
