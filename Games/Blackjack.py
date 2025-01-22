@@ -1,3 +1,7 @@
+# written by M7md-5shbh
+# Blackjack game
+#--------------------------------------------
+
 import random
 art = r"""
 .------.            _     _            _    _            _    

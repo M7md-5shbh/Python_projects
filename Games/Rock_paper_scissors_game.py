@@ -1,3 +1,6 @@
+# written by M7md-5shbh
+# Rock paper scissors game
+#--------------------------------------------
 # importing necessary modules
 import random
 

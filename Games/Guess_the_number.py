@@ -1,3 +1,7 @@
+# written by M7md-5shbh
+# Number Guessing Game
+#--------------------------------------------
+
 # importing the necessary module for pseudo-randomization
 import random
 art = r"""

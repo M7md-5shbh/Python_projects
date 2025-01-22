@@ -1,3 +1,6 @@
+# written by M7md-5shbh
+# Higher-lower game using data scrapped from wikipedia
+#--------------------------------------------
 # importing necessary modules
 # if you don't have any of the modules, you can download it from the terminal/cmd using 
 # pip install "module name"

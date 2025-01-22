@@ -1,4 +1,6 @@
+# written by M7md-5shbh
 # This game expands a bit on the FizzBuzz game, checking to make sure the input is numeric and if the number isn't divisible by either 3 or 5
+#--------------------------------------------
 
 print("Welcome to FizzBuzz Game")
 user_input = input("Enter a number: \n")

@@ -1,3 +1,7 @@
+# written by M7md-5shbh
+# Hangman Game
+#--------------------------------------------
+
 import random
 
 common_verbs = ["had", "were", "can", "said", "use", "do", "will", "would", "make", "like", "has", "look", "write", "go", "see", "could", "been", "call", "am", "find", "did", "get", "come", "made", "may", "take", "know", "live", "give", "think", "say", "help", "tell", "follow", "came", "want", "show", "set", "put", "does", "must", "ask", "went", "read", "need", "move", "try", "change", "play", "spell", "found", "study", "learn", "should", "add", "keep", "start", "thought", "saw", "turn", "might", "close", "seem", "open", "begin", "got", "run", "walk", "began", "grow", "took", "carry", "hear", "stop", "miss", "eat", "watch", "let", "cut", "talk", "being", "leave"]
