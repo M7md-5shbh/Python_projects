@@ -67,7 +67,6 @@ window.configure(bg="#B1DDC6", padx=50, pady=50)
 canvas = Canvas(window, width=800, height=526, bg="#B1DDC6", highlightthickness=0)
 card_front = PhotoImage(file="./images/card_front.png")
 card_back = PhotoImage(file="./images/card_back.png")
-translate_img = PhotoImage(file="./images/translate.png")
 current_image = canvas.create_image(400, 263, image=card_front)
 
 # creating the canvas texts
@@ -81,6 +80,7 @@ arrow_image = PhotoImage(file="./images/next.png")
 arrow_button = Button(image=arrow_image, bg="#B1DDC6", highlightthickness=0,command=new_word)
 arrow_button.grid(column=2, row=1)
 
+translate_img = PhotoImage(file="./images/translate.png")
 display_translation_button = Button(image=translate_img, command=translate, highlightthickness=0, bg="#B1DDC6")
 display_translation_button.grid(column=1, row=1)
 
